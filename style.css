@@ -10,6 +10,21 @@
     color: #fff;
 }
 
+.container-animacao{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+}
+
+.bar{
+    background-color: rgb(12, 3, 178);
+    width: 5%;
+    height: 100%;
+    transition: 500ms;
+}
+
 .container {
     width: 100%;
     height: 100vh;
@@ -31,7 +46,7 @@
 }
 
 .input-mensagem {
-    min-height: 30px;
+    min-height: 100px;
     width: 600px;
     resize: none;
     overflow-y: hidden;
@@ -46,6 +61,8 @@
 .btn-enviar-mensagem{
     padding: 15px;
     border-radius: 10px;
+    height: 50px;
+    border: none;
     background-color: rgb(240, 248, 255);
     color: #000;
     transition: 0.3s;
@@ -66,6 +83,7 @@
 .mensagem{
     display: inline;
     padding: 10px;
+    width: fit-content;
     max-width: 50%;
     border-radius: 10px;
     font-size: 1.2rem;

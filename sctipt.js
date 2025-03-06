@@ -1,6 +1,26 @@
 const textarea = document.querySelector('.input-mensagem');
 const areaMensagens = document.querySelector('.area-mensagens');
 const btnEnviar = document.querySelector('.btn-enviar-mensagem');
+const containerAnimacao = document.querySelector('.container-animacao');
+
+let tempo = 500;
+for (let count = 0; count <= 20; count++){
+    const bar = document.createElement('div');
+    bar.classList.add('bar');
+    containerAnimacao.appendChild(bar);
+
+    setTimeout(() => {
+        bar.style.height = '0';
+    }, tempo);
+
+  tempo += 100;
+  bar.style.transition = `${tempo}ms`;
+}
+
+setTimeout(() => {
+    document.body.removeChild(containerAnimacao);
+  }, tempo*2);
+
 
 class Mensagem{
     constructor(conteudo, horario){
