@@ -48,7 +48,7 @@ document.addEventListener('keyup', (ev) => {
 })
 
 function enviarMensagem(){
-    if(textarea.value !== ""){
+    if(textarea.value.trim() !== ""){
         const mensagem = document.createElement('div');
         const texto = document.createElement('p');
         const hora = document.createElement('div');
